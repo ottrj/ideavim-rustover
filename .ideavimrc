@@ -54,7 +54,7 @@ xnoremap <leader>s{ xi{}<Esc>P
 xnoremap <leader>s} xi{}<Esc>P
 
 " Terminal
-nmap <C-t> <Action>(ActivateTerminalToolWindow)
+" nmap <C-t> <Action>(ActivateTerminalToolWindow)
 nmap <leader>t <Action>(Terminal.OpenInTerminal)
 
 " Zen-mode
@@ -111,9 +111,7 @@ nmap gd <Action>(GotoDeclaration)
 nmap gi <Action>(GotoImplementation)
 nmap gp <Action>(JumpToLastChange)
 nmap gn <Action>(JumpToNextChange)
-nmap gt <Action>(GotoTest)
-nmap gne <Action>(GotoNextError)
-nmap gpe <Action>(GotoPreviousError)
+nmap gt <Action>(GotoTypeDeclaration)
 nmap gmu <Action>(MethodUp)
 nmap gmd <Action>(MethodDown)
 
@@ -167,4 +165,9 @@ nmap ge <Action>(GotoNextError)
 " Go to the previous error using Rustover's GotoPreviousError ActionId
 nmap gE <Action>(GotoPreviousError)
 
+" move backwards
+noremap <C-i><Action>(Back)
+
 nmap <leader>sp <Action>(SelectInProjectView)
+
+nmap <leader>p <Action>(PinActiveEditorTab)
